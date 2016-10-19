@@ -17,15 +17,6 @@ body {
 	height: 3000px;
 }
 
-.background1 {
-	background-image: url("sky.JPG");
-	
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	height: 500px;
-}
-
 .wrapper {
 	
 	
@@ -33,10 +24,11 @@ body {
 	padding-bottom: 40%;
 	perspective: 800px;
 	perspective-origin: 50% 200px;
-	animation-name: scroll;
-	animation-duration: 30s;
+	animation-name: distance;
+	animation-duration: 15s;
 	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+	animation-direction: normal;
+	animation-timing-function: ease-in;
 	
 }
 
@@ -50,41 +42,52 @@ body {
 	position: relative;
 	margin: 0 55%;
 	width: 540px;
-	height: 1200px;
+	
 	color: yellow;
-	font-size: 24px;
+	font-size: 32px;
 	text-align: justify;
 	
-	transform: translateZ(-1000px) rotateX(75deg) translateY(-800px);
+	transform: translateZ(-1000px) rotateX(82deg) translateY(-1800px);
 	transform-origin: center top;
 	animation-name: scroll;
-	animation-duration: 12s;
+	animation-duration: 15s;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
-	animation-timing-function: ease;
+	animation-timing-function: linear;
 }
 
 @keyframes scroll {
 	0% {
 		
-		transform: translateZ(0px) rotateX(0deg) translateY(0px);
-		
+		transform: rotateX(82deg) translateY(0px);
 		padding-top: 40%;
+		
 		
 	}
 	
-	
-	
-	
 	100% {
 		
-		transform: translateZ(-1000px) rotateX(75deg) translateY(-800px);
-		
+		transform:rotateX(82deg) translateY(-1800px);
 		padding-top: 10%;
 		
 	}
 	
 }
 
+@keyframes distance {
+	0% {
+		
+		
+		perspective: 800px;
+		
+	}
+	
+	100% {
+		
+		
+		perspective: 200px;
+	}
+	
+}
 
 

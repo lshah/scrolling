@@ -47,6 +47,7 @@ body {
 	font-size: 32px;
 	text-align: justify;
 	
+	transform: translateZ(-1000px) rotateX(82deg) translateY(-3200px);
 	transform-origin: center top;
 	animation-name: scroll;
 	animation-duration: 15s;
@@ -66,6 +67,7 @@ body {
 	
 	100% {
 		
+		transform:rotateX(82deg) translateY(-3200px);
 		padding-top: 10%;
 		
 	}
